@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Resource/Item.gd" type="Script" id=1]
+[ext_resource path="res://ObjectTexture/SpriteT1.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Wii"
+texture = ExtResource( 2 )
+StarPlatForm = 3.0
+StarGenre = 0.0
+StarStyle = 0.0
+IsPlatForm = true
+IsGenre = false
+IsStyle = false
+IsRandom = false
+IfGenre = ""
+IfStyle = ""
+IfRandomGenre = [  ]
+IfRandomStyle = [  ]

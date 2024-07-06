@@ -1,0 +1,380 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2wjtugqas6mt"]
+
+[ext_resource type="FontFile" uid="uid://00jdyaj0gp7q" path="res://Other/Fipps-Regular.otf" id="3"]
+[ext_resource type="Script" path="res://Script/ShopUi.gd" id="6"]
+[ext_resource type="Script" path="res://Script/ShopCard.gd" id="7"]
+
+[sub_resource type="Animation" id="2"]
+resource_name = "Closing"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBar/ShopPHBar/LGap:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(588, 0), Vector2(1122, 0)]
+}
+
+[sub_resource type="Animation" id="3"]
+resource_name = "CoinDeducted"
+length = 0.11
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN/CoinDeducted:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.09, 0.11),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN/CoinDeducted:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03, 0.07),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(85, 11), Vector2(85, -14)]
+}
+
+[sub_resource type="Animation" id="4"]
+resource_name = "Opening"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBar/ShopPHBar/LGap:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1122, 0), Vector2(588, 0)]
+}
+
+[sub_resource type="Animation" id="5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN/CoinDeducted:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN/CoinDeducted:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(85, 11)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBar/ShopPHBar/LGap:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1122, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i0rcp"]
+_data = {
+"Closing": SubResource("2"),
+"CoinDeducted": SubResource("3"),
+"Opening": SubResource("4"),
+"RESET": SubResource("5")
+}
+
+[sub_resource type="FontFile" id="1"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="ShopUi" type="MarginContainer"]
+custom_minimum_size = Vector2(1024, 600)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6")
+
+[node name="AnimPlay" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i0rcp")
+}
+
+[node name="VBar" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ShopPHBar" type="HBoxContainer" parent="VBar"]
+layout_mode = 2
+
+[node name="LGap" type="MarginContainer" parent="VBar/ShopPHBar"]
+custom_minimum_size = Vector2(1122, 0)
+layout_mode = 2
+
+[node name="BackG" type="MarginContainer" parent="VBar/ShopPHBar"]
+layout_mode = 2
+
+[node name="Background" type="Sprite2D" parent="VBar/ShopPHBar/BackG"]
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBar/ShopPHBar"]
+layout_mode = 2
+
+[node name="TGap" type="MarginContainer" parent="VBar/ShopPHBar/VBoxContainer"]
+custom_minimum_size = Vector2(1024, 28)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBar/ShopPHBar/VBoxContainer"]
+layout_mode = 2
+
+[node name="ShopButton" type="MarginContainer" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 266)
+layout_mode = 2
+
+[node name="ShopN" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopButton"]
+
+[node name="Label" type="Label" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopButton/ShopN"]
+custom_minimum_size = Vector2(80, 266)
+offset_right = 80.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.643137, 0.866667, 0.858824, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.227451, 0.368627, 1)
+theme_override_colors/font_outline_color = Color(0.309804, 0.560784, 0.729412, 1)
+theme_override_fonts/font = SubResource("1")
+text = "S
+H
+O
+P"
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopButton/ShopN"]
+custom_minimum_size = Vector2(80, 266)
+offset_right = 12.0
+offset_bottom = 20.0
+focus_mode = 0
+toggle_mode = true
+flat = true
+
+[node name="ShopPurchase" type="MarginContainer" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 266)
+layout_mode = 2
+
+[node name="CoinsN" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase"]
+
+[node name="CoinsIcon" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN"]
+position = Vector2(0, 7)
+scale = Vector2(2, 2)
+centered = false
+hframes = 2
+vframes = 3
+frame = 5
+
+[node name="FirstN" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN"]
+position = Vector2(58, 15)
+scale = Vector2(2, 2)
+centered = false
+hframes = 4
+vframes = 3
+
+[node name="SecondN" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN"]
+position = Vector2(85, 15)
+scale = Vector2(2, 2)
+centered = false
+hframes = 4
+vframes = 3
+
+[node name="CoinDeducted" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/CoinsN"]
+position = Vector2(85, 11)
+scale = Vector2(2, 2)
+centered = false
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="KartB" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase"]
+position = Vector2(38, 72)
+
+[node name="BIcon" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/KartB"]
+centered = false
+hframes = 3
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/KartB"]
+custom_minimum_size = Vector2(66, 81)
+offset_right = 12.0
+offset_bottom = 20.0
+focus_mode = 0
+flat = true
+
+[node name="ReStockB" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase"]
+position = Vector2(38, 162)
+
+[node name="BIcon" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/ReStockB"]
+centered = false
+hframes = 3
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/ReStockB"]
+custom_minimum_size = Vector2(66, 81)
+offset_right = 66.0
+offset_bottom = 81.0
+focus_mode = 0
+flat = true
+
+[node name="ShopCardPoint" type="MarginContainer" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FirstCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint"]
+position = Vector2(45, 75)
+script = ExtResource("7")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FirstCPoint"]
+centered = false
+hframes = 6
+frame = 1
+
+[node name="Card" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FirstCPoint"]
+position = Vector2(8, 8)
+
+[node name="SecondCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint"]
+position = Vector2(210, 75)
+script = ExtResource("7")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/SecondCPoint"]
+centered = false
+hframes = 6
+frame = 1
+
+[node name="Card" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/SecondCPoint"]
+position = Vector2(8, 8)
+
+[node name="ThirdCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint"]
+position = Vector2(45, 285)
+script = ExtResource("7")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/ThirdCPoint"]
+centered = false
+hframes = 6
+frame = 1
+
+[node name="Card" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/ThirdCPoint"]
+position = Vector2(8, 8)
+
+[node name="FourthCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint"]
+position = Vector2(210, 285)
+script = ExtResource("7")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FourthCPoint"]
+centered = false
+hframes = 6
+frame = 1
+
+[node name="Card" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FourthCPoint"]
+position = Vector2(8, 8)
+
+[node name="RandCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint"]
+position = Vector2(-138, 285)
+
+[node name="Sprite2D" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/RandCPoint"]
+centered = false
+hframes = 6
+frame = 1
+
+[node name="Sprite2" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/RandCPoint"]
+centered = false
+hframes = 6
+
+[node name="Sprite3" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/RandCPoint"]
+position = Vector2(-2, -2)
+centered = false
+hframes = 6
+
+[node name="Sprite4" type="Sprite2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/RandCPoint"]
+position = Vector2(-4, -4)
+centered = false
+hframes = 6
+
+[node name="ShopCardButton" type="MarginContainer" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FirstCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton"]
+position = Vector2(41, 75)
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/FirstCPoint"]
+custom_minimum_size = Vector2(136, 184)
+focus_mode = 0
+flat = true
+
+[node name="SecondCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton"]
+position = Vector2(206, 75)
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/SecondCPoint"]
+custom_minimum_size = Vector2(136, 184)
+focus_mode = 0
+flat = true
+
+[node name="ThirdCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton"]
+position = Vector2(41, 285)
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/ThirdCPoint"]
+custom_minimum_size = Vector2(136, 184)
+focus_mode = 0
+flat = true
+
+[node name="FourthCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton"]
+position = Vector2(206, 285)
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/FourthCPoint"]
+custom_minimum_size = Vector2(136, 184)
+focus_mode = 0
+flat = true
+
+[node name="RandCPoint" type="Node2D" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton"]
+position = Vector2(-142, 285)
+
+[node name="Button" type="Button" parent="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/RandCPoint"]
+custom_minimum_size = Vector2(136, 184)
+focus_mode = 0
+flat = true
+
+[connection signal="toggled" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopButton/ShopN/Button" to="." method="_OnButtonToggle"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/ReStockB/Button" to="." method="_OnReStockButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/ReStockB/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FirstCPoint" method="_OnFirstCPointButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/ReStockB/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/SecondCPoint" method="_OnSecondCPointButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/ReStockB/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/ThirdCPoint" method="_OnThirdCPointButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopPurchase/ReStockB/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FourthCPoint" method="_OnFourthCPointButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/FirstCPoint/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FirstCPoint" method="_OnFirstBuyCButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/SecondCPoint/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/SecondCPoint" method="_OnSecondBuyCButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/ThirdCPoint/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/ThirdCPoint" method="_OnThirdBuyCButtonPressed"]
+[connection signal="pressed" from="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardButton/FourthCPoint/Button" to="VBar/ShopPHBar/VBoxContainer/HBoxContainer/ShopCardPoint/FourthCPoint" method="_OnFourthBuyCButtonPressed"]

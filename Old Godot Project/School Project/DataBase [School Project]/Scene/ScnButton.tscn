@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Texture/BttnPres.tres" type="StyleBox" id=1]
+[ext_resource path="res://Texture/ButtonNrm.tres" type="StyleBox" id=2]
+[ext_resource path="res://Script/SrtButton.gd" type="Script" id=3]
+[ext_resource path="res://AvenirLTStd-Black.otf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 4 )
+
+[node name="UiButton" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -774.0
+margin_bottom = -500.0
+script = ExtResource( 3 )
+
+[node name="Gap" type="MarginContainer" parent="."]
+margin_right = 250.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 250, 16 )
+
+[node name="Button" type="Button" parent="."]
+margin_top = 20.0
+margin_right = 250.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 250, 48 )
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 2 )
+enabled_focus_mode = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

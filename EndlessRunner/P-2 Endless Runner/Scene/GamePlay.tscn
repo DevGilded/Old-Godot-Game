@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://fiexyadb46e"]
+
+[ext_resource type="Script" path="res://Script/MovingTexture.gd" id="2"]
+
+[node name="GamePlay" type="Node2D"]
+
+[node name="foregroundLoader" type="Node2D" parent="."]
+
+[node name="foreground1" type="Sprite2D" parent="foregroundLoader"]
+position = Vector2(0, -64)
+scale = Vector2(0.5, 0.5)
+centered = false
+script = ExtResource("2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.138, 0.138)
+limit_left = 0
+limit_top = 0
+limit_right = 150
+limit_bottom = 265
+editor_draw_limits = true
+
+[connection signal="Spawn" from="foregroundLoader/foreground1" to="foregroundLoader/foreground1" method="LoaderReceiver"]

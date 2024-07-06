@@ -1,0 +1,242 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Sprite2D/FrameBackground.png" type="Texture2D" id=1]
+[ext_resource path="res://Sprite2D/Frame.png" type="Texture2D" id=2]
+[ext_resource path="res://Sprite2D/CardImage.png" type="Texture2D" id=3]
+[ext_resource path="res://Sprite2D/Rarity.png" type="Texture2D" id=4]
+[ext_resource path="res://Sprite2D/StatsBackground.png" type="Texture2D" id=5]
+[ext_resource path="res://Sprite2D/CostBackground.png" type="Texture2D" id=6]
+[ext_resource path="res://Sprite2D/NumberFont.png" type="Texture2D" id=7]
+[ext_resource path="res://Sprite2D/NameTag.png" type="Texture2D" id=8]
+[ext_resource path="res://Sprite2D/Effect.png" type="Texture2D" id=9]
+[ext_resource path="res://Other/Fipps-Regular.otf" type="FontFile" id=10]
+[ext_resource path="res://Script/CardBase.gd" type="Script" id=11]
+
+[sub_resource type="FontFile" id=1]
+size = 8
+font_data = ExtResource( 10 )
+
+[node name="CardBase" type="MarginContainer"]
+offset_right = 120.0
+offset_bottom = 168.0
+script = ExtResource( 11 )
+
+[node name="FrameBackground" type="Sprite2D" parent="."]
+texture = ExtResource( 1 )
+centered = false
+hframes = 2
+
+[node name="Frame" type="Sprite2D" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ImageBar" type="VBoxContainer" parent="."]
+offset_right = 120.0
+offset_bottom = 168.0
+
+[node name="CardImage" type="HBoxContainer" parent="ImageBar"]
+offset_right = 120.0
+offset_bottom = 52.0
+
+[node name="LeftGap" type="MarginContainer" parent="ImageBar/CardImage"]
+offset_right = 6.0
+offset_bottom = 52.0
+custom_minimum_size = Vector2( 6, 0 )
+
+[node name="Image" type="MarginContainer" parent="ImageBar/CardImage"]
+offset_left = 10.0
+offset_right = 110.0
+offset_bottom = 52.0
+custom_minimum_size = Vector2( 100, 52 )
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageBar/CardImage/Image"]
+position = Vector2( 0, 17 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Cost" type="HBoxContainer" parent="ImageBar"]
+offset_top = 56.0
+offset_right = 120.0
+offset_bottom = 69.0
+
+[node name="LeftGap" type="MarginContainer" parent="ImageBar/Cost"]
+offset_bottom = 13.0
+
+[node name="CostBackground" type="MarginContainer" parent="ImageBar/Cost"]
+offset_left = 4.0
+offset_right = 24.0
+offset_bottom = 13.0
+custom_minimum_size = Vector2( 20, 13 )
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageBar/Cost/CostBackground"]
+position = Vector2( 0, -55 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="BottomBar" type="VBoxContainer" parent="ImageBar"]
+offset_top = 73.0
+offset_right = 120.0
+offset_bottom = 96.0
+
+[node name="CardStats" type="HBoxContainer" parent="ImageBar/BottomBar"]
+offset_right = 120.0
+offset_bottom = 4.0
+
+[node name="Stats" type="MarginContainer" parent="ImageBar/BottomBar/CardStats"]
+offset_bottom = 4.5
+custom_minimum_size = Vector2( 0, 4.5 )
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageBar/BottomBar/CardStats/Stats"]
+position = Vector2( 0, 23 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="NameTag" type="HBoxContainer" parent="ImageBar/BottomBar"]
+offset_top = 8.0
+offset_right = 120.0
+offset_bottom = 19.0
+
+[node name="NameTag" type="MarginContainer" parent="ImageBar/BottomBar/NameTag"]
+offset_right = 120.0
+offset_bottom = 11.0
+custom_minimum_size = Vector2( 120, 11 )
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageBar/BottomBar/NameTag/NameTag"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="CardEffect" type="HBoxContainer" parent="ImageBar/BottomBar"]
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 23.0
+
+[node name="LeftGap" type="MarginContainer" parent="ImageBar/BottomBar/CardEffect"]
+offset_right = 14.0
+custom_minimum_size = Vector2( 14, 0 )
+
+[node name="Effect" type="MarginContainer" parent="ImageBar/BottomBar/CardEffect"]
+offset_left = 18.0
+offset_right = 18.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageBar/BottomBar/CardEffect/Effect"]
+position = Vector2( 0, 9 )
+texture = ExtResource( 9 )
+centered = false
+hframes = 6
+
+[node name="MiddleGap" type="MarginContainer" parent="ImageBar/BottomBar/CardEffect"]
+offset_left = 22.0
+offset_right = 66.0
+custom_minimum_size = Vector2( 44, 0 )
+
+[node name="Type" type="MarginContainer" parent="ImageBar/BottomBar/CardEffect"]
+offset_left = 70.0
+offset_right = 70.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ImageBar/BottomBar/CardEffect/Type"]
+position = Vector2( 0, 9 )
+texture = ExtResource( 9 )
+centered = false
+hframes = 6
+
+[node name="TextBar" type="VBoxContainer" parent="."]
+offset_right = 120.0
+offset_bottom = 168.0
+
+[node name="Rating" type="HBoxContainer" parent="TextBar"]
+offset_right = 120.0
+offset_bottom = 12.0
+
+[node name="LeftGap" type="MarginContainer" parent="TextBar/Rating"]
+offset_right = 58.0
+offset_bottom = 12.0
+custom_minimum_size = Vector2( 58, 12 )
+
+[node name="Rarity" type="MarginContainer" parent="TextBar/Rating"]
+offset_left = 62.0
+offset_right = 62.0
+offset_bottom = 12.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TextBar/Rating/Rarity"]
+texture = ExtResource( 4 )
+centered = false
+vframes = 6
+
+[node name="Cost" type="HBoxContainer" parent="TextBar"]
+offset_top = 16.0
+offset_right = 120.0
+offset_bottom = 69.0
+custom_minimum_size = Vector2( 0, 53 )
+
+[node name="LeftGap" type="MarginContainer" parent="TextBar/Cost"]
+offset_right = 4.0
+offset_bottom = 53.0
+custom_minimum_size = Vector2( 4, 0 )
+
+[node name="CostAmount" type="MarginContainer" parent="TextBar/Cost"]
+offset_left = 8.0
+offset_right = 8.0
+offset_bottom = 53.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TextBar/Cost/CostAmount"]
+texture = ExtResource( 7 )
+centered = false
+hframes = 4
+vframes = 3
+
+[node name="BottomBar" type="VBoxContainer" parent="TextBar"]
+offset_top = 73.0
+offset_right = 120.0
+offset_bottom = 125.0
+
+[node name="Name" type="HBoxContainer" parent="TextBar/BottomBar"]
+offset_right = 120.0
+offset_bottom = 48.0
+custom_minimum_size = Vector2( 0, 48 )
+
+[node name="Layer" type="Node2D" parent="TextBar/BottomBar/Name"]
+
+[node name="Label" type="Label" parent="TextBar/BottomBar/Name/Layer"]
+offset_top = 12.0
+offset_right = 120.0
+offset_bottom = 35.0
+custom_minimum_size = Vector2( 120, 23 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_fonts/font = SubResource( 1 )
+text = "Empty Card"
+align = 1
+
+[node name="Stats" type="HBoxContainer" parent="TextBar/BottomBar"]
+offset_top = 52.0
+offset_right = 120.0
+offset_bottom = 52.0
+
+[node name="LeftGap" type="MarginContainer" parent="TextBar/BottomBar/Stats"]
+offset_right = 24.0
+custom_minimum_size = Vector2( 24, 0 )
+
+[node name="Effect" type="MarginContainer" parent="TextBar/BottomBar/Stats"]
+offset_left = 28.0
+offset_right = 28.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TextBar/BottomBar/Stats/Effect"]
+texture = ExtResource( 7 )
+centered = false
+hframes = 4
+vframes = 3
+
+[node name="MiddleGap" type="MarginContainer" parent="TextBar/BottomBar/Stats"]
+offset_left = 32.0
+offset_right = 76.0
+custom_minimum_size = Vector2( 44, 0 )
+
+[node name="Health" type="MarginContainer" parent="TextBar/BottomBar/Stats"]
+offset_left = 80.0
+offset_right = 80.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TextBar/BottomBar/Stats/Health"]
+texture = ExtResource( 7 )
+centered = false
+hframes = 4
+vframes = 3

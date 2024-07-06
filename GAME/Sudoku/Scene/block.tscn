@@ -1,0 +1,116 @@
+[gd_scene load_steps=4 format=3 uid="uid://t0eny4o2lln3"]
+
+[ext_resource type="Script" path="res://Script/Block.gd" id="1_fwsj1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddto8"]
+bg_color = Color(0.18, 0.18, 0.18, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwsrh"]
+
+[node name="Block" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fwsj1")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 212.0
+offset_bottom = 212.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddto8")
+
+[node name="Numbers" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 206.0
+offset_bottom = 206.0
+
+[node name="Row1" type="HBoxContainer" parent="Numbers"]
+layout_mode = 2
+
+[node name="Num1" type="Label" parent="Numbers/Row1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Num2" type="Label" parent="Numbers/Row1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Num3" type="Label" parent="Numbers/Row1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Row2" type="HBoxContainer" parent="Numbers"]
+layout_mode = 2
+
+[node name="Num1" type="Label" parent="Numbers/Row2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Num2" type="Label" parent="Numbers/Row2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Num3" type="Label" parent="Numbers/Row2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Row3" type="HBoxContainer" parent="Numbers"]
+layout_mode = 2
+
+[node name="Num1" type="Label" parent="Numbers/Row3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Num2" type="Label" parent="Numbers/Row3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Num3" type="Label" parent="Numbers/Row3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwsrh")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://b141c3wlh5woo"]
+
+[ext_resource type="PackedScene" uid="uid://b0k2yup7g4j1j" path="res://Scene/clock.tscn" id="1_sqbuq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vs201"]
+bg_color = Color(0.14902, 0.164706, 0.247059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_moc4v"]
+bg_color = Color(0.117647, 0.12549, 0.156863, 0.909804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwa0g"]
+bg_color = Color(0.117647, 0.12549, 0.156863, 0.909804)
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyugu"]
+bg_color = Color(0.117647, 0.12549, 0.156863, 0.909804)
+
+[node name="Main" type="Node2D"]
+
+[node name="Layer 0" type="Control" parent="."]
+custom_minimum_size = Vector2(1152, 595)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 595.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Layer 0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_vs201")
+
+[node name="Image" type="Sprite2D" parent="Layer 0/Background"]
+position = Vector2(576, 324)
+
+[node name="Infobox" type="Panel" parent="Layer 0"]
+custom_minimum_size = Vector2(345, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = 361.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_moc4v")
+
+[node name="Calendarbox" type="Panel" parent="Layer 0"]
+custom_minimum_size = Vector2(720, 480)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -755.5
+offset_top = -191.5
+offset_right = -35.5
+offset_bottom = 288.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iwa0g")
+
+[node name="Monthbox_Yearbox" type="Panel" parent="Layer 0"]
+custom_minimum_size = Vector2(0, 94)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_top = 35.5
+offset_right = 540.0
+offset_bottom = 129.5
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wyugu")
+
+[node name="Clock" parent="." instance=ExtResource("1_sqbuq")]
+position = Vector2(188, 172.5)

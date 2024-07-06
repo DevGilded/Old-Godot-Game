@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UserMovement.gd" type="Script" id=1]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldBuilder.gd" type="Script" id=5]
+[ext_resource path="res://TileTexture.png" type="Texture" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="WorldBuilder" type="Node2D"]
+script = ExtResource( 5 )
+tilesetTexture = ExtResource( 6 )
+tileAmount = 4
+tileSize = Vector2( 16, 16 )
+tileHframes = 2
+tileVframes = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.498039 )
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="User" type="KinematicBody2D" parent="CanvasLayer"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/User"]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer/User"]
+current = true
+
+[node name="UI" parent="CanvasLayer/User" instance=ExtResource( 3 )]
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0

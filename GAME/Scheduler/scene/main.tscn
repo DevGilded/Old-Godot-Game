@@ -1,0 +1,188 @@
+[gd_scene load_steps=6 format=3 uid="uid://byln31yxl4e4i"]
+
+[ext_resource type="FontFile" uid="uid://dx0outiw0u50l" path="res://resources/font/dum1/dum1.ttf" id="1_54pdq"]
+[ext_resource type="Script" path="res://scr/calendar.gd" id="2_abmsu"]
+[ext_resource type="PackedScene" uid="uid://dv8slsrq3ui4" path="res://scene/day_label.tscn" id="2_v4fgi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bug36"]
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fox32"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+border_width_bottom = 4
+
+[node name="Main" type="Node2D"]
+
+[node name="Calendar_Manager" type="Node" parent="." node_paths=PackedStringArray("Header", "calendar_grid")]
+script = ExtResource("2_abmsu")
+Header = NodePath("../Background2/DATE")
+calendar_grid = NodePath("../CALENDAR GRID")
+
+[node name="Background2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Panel" parent="Background2"]
+layout_mode = 0
+offset_right = 677.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bug36")
+
+[node name="Header_Background" type="Panel" parent="Background2"]
+layout_mode = 0
+offset_right = 677.0
+offset_bottom = 67.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fox32")
+
+[node name="DATE" type="Label" parent="Background2"]
+layout_mode = 0
+offset_left = 113.0
+offset_right = 677.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("1_54pdq")
+theme_override_font_sizes/font_size = 64
+text = "DAY MONTH YEAR "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CALENDAR GRID" type="GridContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 83.0
+offset_right = 616.0
+offset_bottom = 583.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 95
+theme_override_constants/v_separation = 95
+columns = 7
+
+[node name="Day_Label" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label2" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label3" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label4" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label5" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label6" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label7" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label8" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label9" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label10" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label11" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label12" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label13" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label14" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label15" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label16" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label17" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label18" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label19" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label20" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label21" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label22" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label23" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label24" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label25" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label26" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label27" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label28" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label29" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label30" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label31" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label32" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label33" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label34" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label35" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label36" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label37" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label38" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label39" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label40" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label41" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2
+
+[node name="Day_Label42" parent="CALENDAR GRID" instance=ExtResource("2_v4fgi")]
+layout_mode = 2

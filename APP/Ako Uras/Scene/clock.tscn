@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0k2yup7g4j1j"]
+
+[ext_resource type="Script" path="res://Script/clock.gd" id="1_rnv00"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fgx1v"]
+
+[sub_resource type="Gradient" id="Gradient_37n7e"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.919137, 0.606245, 0.336398, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vq305"]
+gradient = SubResource("Gradient_37n7e")
+
+[sub_resource type="Gradient" id="Gradient_prls3"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_p7vc7"]
+gradient = SubResource("Gradient_prls3")
+
+[node name="Clock" type="Node2D"]
+script = ExtResource("1_rnv00")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(250, 250)
+mesh = SubResource("SphereMesh_fgx1v")
+texture = SubResource("GradientTexture1D_vq305")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+scale = Vector2(10, 10)
+mesh = SubResource("SphereMesh_fgx1v")
+texture = SubResource("GradientTexture1D_p7vc7")
+
+[node name="HOUR" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="HOUR"]
+custom_minimum_size = Vector2(6, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_right = -17.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="MINUTE" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="MINUTE"]
+custom_minimum_size = Vector2(4, 125)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.0
+offset_right = -18.0
+offset_bottom = 125.0
+grow_horizontal = 2
+
+[node name="SECOND" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="SECOND"]
+custom_minimum_size = Vector2(2, 125)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.0
+offset_right = -19.0
+offset_bottom = 125.0
+grow_horizontal = 2

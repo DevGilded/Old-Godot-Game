@@ -1,0 +1,330 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Sprite/MainMenuBackground.png" type="Texture" id=1]
+[ext_resource path="res://Script/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Other/PressedFlat.tres" type="StyleBox" id=3]
+[ext_resource path="res://Other/HoverFlat.tres" type="StyleBox" id=4]
+[ext_resource path="res://Other/NormalFlat.tres" type="StyleBox" id=5]
+[ext_resource path="res://Other/Fipps-Regular.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scene/Loading.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1024, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "WhenLogin"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1024, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1024, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 1024, 0 )
+
+[node name="Button3" type="Button" parent="Node2D"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 134.0
+margin_bottom = 64.0
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+text = "   Back   "
+
+[node name="Button2" type="VBoxContainer" parent="Node2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 332.0
+margin_top = 100.0
+margin_right = 692.0
+margin_bottom = 500.0
+
+[node name="Gap" type="MarginContainer" parent="Node2D/Button2"]
+margin_right = 360.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button" type="Button" parent="Node2D/Button2"]
+margin_top = 19.0
+margin_right = 360.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 70 )
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+text = "Customer"
+
+[node name="Gap2" type="MarginContainer" parent="Node2D/Button2"]
+margin_top = 94.0
+margin_right = 360.0
+margin_bottom = 109.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button2" type="Button" parent="Node2D/Button2"]
+margin_top = 113.0
+margin_right = 360.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 0, 70 )
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+text = "Employee"
+
+[node name="Gap3" type="MarginContainer" parent="Node2D/Button2"]
+margin_top = 188.0
+margin_right = 360.0
+margin_bottom = 203.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button3" type="Button" parent="Node2D/Button2"]
+margin_top = 207.0
+margin_right = 360.0
+margin_bottom = 278.0
+rect_min_size = Vector2( 0, 70 )
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+text = "Car"
+
+[node name="Gap4" type="MarginContainer" parent="Node2D/Button2"]
+margin_top = 282.0
+margin_right = 360.0
+margin_bottom = 297.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button4" type="Button" parent="Node2D/Button2"]
+margin_top = 301.0
+margin_right = 360.0
+margin_bottom = 372.0
+rect_min_size = Vector2( 0, 70 )
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+text = "Payment"
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+z_index = -1
+texture = ExtResource( 1 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/WhenLogin = SubResource( 2 )
+
+[node name="Button" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -200.0
+margin_right = 180.0
+margin_bottom = 200.0
+
+[node name="Gap" type="MarginContainer" parent="Button"]
+margin_right = 360.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button" type="Button" parent="Button"]
+margin_top = 19.0
+margin_right = 360.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Customer"
+
+[node name="Gap2" type="MarginContainer" parent="Button"]
+margin_top = 94.0
+margin_right = 360.0
+margin_bottom = 109.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button2" type="Button" parent="Button"]
+margin_top = 113.0
+margin_right = 360.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Employee"
+
+[node name="Gap3" type="MarginContainer" parent="Button"]
+margin_top = 188.0
+margin_right = 360.0
+margin_bottom = 203.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button3" type="Button" parent="Button"]
+margin_top = 207.0
+margin_right = 360.0
+margin_bottom = 278.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Car"
+
+[node name="Gap4" type="MarginContainer" parent="Button"]
+margin_top = 282.0
+margin_right = 360.0
+margin_bottom = 297.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Button4" type="Button" parent="Button"]
+margin_top = 301.0
+margin_right = 360.0
+margin_bottom = 372.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "Payment"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 134.0
+margin_bottom = 64.0
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_focus = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_hover = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_colors/font_color_pressed = Color( 0.223529, 0.290196, 0.313726, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 5 )
+enabled_focus_mode = 0
+text = "   Back   "
+
+[node name="Loading" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

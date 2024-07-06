@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://da3ljckxqa3p1"]
+
+[ext_resource type="Texture2D" uid="uid://bhokkkrjdg4au" path="res://icon.png" id="1"]
+
+[node name="CanvasLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(64, 448)
+texture_normal = ExtResource("1")
+passby_press = true
+action = "left"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2(192, 448)
+texture_normal = ExtResource("1")
+passby_press = true
+action = "right"
+
+[node name="Jump" type="TouchScreenButton" parent="."]
+position = Vector2(832, 448)
+texture_normal = ExtResource("1")
+passby_press = true
+action = "jump"

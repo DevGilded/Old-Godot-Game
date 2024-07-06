@@ -1,0 +1,473 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://RoomV1.png" type="Texture" id=1]
+[ext_resource path="res://Item.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.203922, 0.109804, 0.152941, 1 )
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/GameSprite4.png-52812e2826d1f45c8ae9ba513cdc78c0.stex"
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/GameSprite5.png-33886375599c3f6d08d2411e880d2ce5.stex"
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/GameSprite11.png-ba8012941cd7d0bbf877289c5b1f48cd.stex"
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/GameSprite3.png-9a934b24aef9d13d6edcb91d327d2e60.stex"
+
+[sub_resource type="StreamTexture" id=6]
+load_path = "res://.import/GameSprite2.png-a422ed6bfa9e2ca5708f18b4f7bedee4.stex"
+
+[sub_resource type="StreamTexture" id=7]
+load_path = "res://.import/GameSprite1.png-22d67c13635ca9c7b2d2d3dcb2ec86ed.stex"
+
+[sub_resource type="StreamTexture" id=8]
+load_path = "res://.import/GameSprite6.png-119854204f74149a620d099c1ff351f7.stex"
+
+[node name="Gameplay" type="Node2D"]
+position = Vector2( -19, 0 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 19.0
+margin_right = 915.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="RoomV1" type="Sprite" parent="."]
+position = Vector2( 19, 44 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Wii" type="Button" parent="."]
+margin_left = 351.0
+margin_top = 112.0
+margin_right = 387.0
+margin_bottom = 196.0
+flat = true
+script = ExtResource( 2 )
+StarPlatForm = 3.0
+IsPlatForm = true
+
+[node name="Pc" type="Button" parent="."]
+margin_left = 623.0
+margin_top = 404.0
+margin_right = 691.0
+margin_bottom = 524.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 3.5
+IsPlatForm = true
+
+[node name="VrGoogle" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 156.0
+margin_right = 459.0
+margin_bottom = 196.0
+flat = true
+script = ExtResource( 2 )
+StarPlatForm = 3.5
+IsPlatForm = true
+
+[node name="Printer" type="Button" parent="."]
+margin_left = 471.0
+margin_top = 128.0
+margin_right = 575.0
+margin_bottom = 156.0
+flat = true
+script = ExtResource( 2 )
+StarPlatForm = 3.5
+StarGenre = 3.0
+IsPlatForm = true
+IsGenre = true
+IfGenre = "CardGame"
+
+[node name="Reward" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 116.0
+margin_right = 451.0
+margin_bottom = 156.0
+flat = true
+script = ExtResource( 2 )
+IsGenre = true
+IsRandom = true
+IfRandomGenre = [ "Soccer", "BasketBall", "Tennis", "VolleyBall", "BaseBall", "IceHockey", "Golf" ]
+
+[node name="RandomBook" type="Button" parent="."]
+margin_left = 507.0
+margin_top = 172.0
+margin_right = 579.0
+margin_bottom = 196.0
+flat = true
+script = ExtResource( 2 )
+IsGenre = true
+IsStyle = true
+IsRandom = true
+IfRandomGenre = [ "Fantasy", "History", "NovelStory", "LearningBook", "DrawingBook" ]
+IfRandomStyle = [ "Fantasy", "History", "NovelStory", "LearningBook", "DrawingBook" ]
+
+[node name="RandomBook2" type="Button" parent="."]
+margin_left = 655.0
+margin_top = 356.0
+margin_right = 699.0
+margin_bottom = 376.0
+flat = true
+script = ExtResource( 2 )
+IsGenre = true
+IsStyle = true
+IsRandom = true
+IfRandomGenre = [ "Fantasy", "History", "NovelStory", "LearningBook", "DrawingBook" ]
+IfRandomStyle = [ "Fantasy", "History", "NovelStory", "LearningBook", "DrawingBook" ]
+
+[node name="Rubik\'s" type="Button" parent="."]
+margin_left = 471.0
+margin_top = 172.0
+margin_right = 499.0
+margin_bottom = 196.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 2.5
+IsGenre = true
+IfGenre = "Puzzle"
+
+[node name="FishTank" type="Button" parent="."]
+margin_left = 591.0
+margin_top = 124.0
+margin_right = 695.0
+margin_bottom = 196.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 3.5
+StarStyle = 4.5
+IsGenre = true
+IsStyle = true
+IfGenre = "Fish"
+IfStyle = "Ocean"
+
+[node name="Fantasy" type="Button" parent="."]
+margin_left = 715.0
+margin_top = 96.0
+margin_right = 727.0
+margin_bottom = 148.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 4.0
+StarStyle = 3.5
+IsGenre = true
+IsStyle = true
+IfGenre = "Fantasy"
+IfStyle = "Fantasy"
+
+[node name="History" type="Button" parent="."]
+margin_left = 727.0
+margin_top = 104.0
+margin_right = 739.0
+margin_bottom = 148.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 1.5
+StarStyle = 2.5
+IsGenre = true
+IsStyle = true
+IfGenre = "History"
+IfStyle = "History"
+
+[node name="Novel" type="Button" parent="."]
+margin_left = 739.0
+margin_top = 108.0
+margin_right = 751.0
+margin_bottom = 148.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 1.5
+StarStyle = 0.5
+IsGenre = true
+IsStyle = true
+IfGenre = "NovelStory"
+IfStyle = "NovelStory"
+
+[node name="LearningBook" type="Button" parent="."]
+margin_left = 747.0
+margin_top = 100.0
+margin_right = 763.0
+margin_bottom = 148.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 0.5
+StarStyle = 0.5
+IsGenre = true
+IsStyle = true
+IfGenre = "LearningBook"
+IfStyle = "LearningBook"
+
+[node name="DrawingBook" type="Button" parent="."]
+margin_left = 763.0
+margin_top = 108.0
+margin_right = 775.0
+margin_bottom = 148.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 2.0
+StarStyle = 2.5
+IsGenre = true
+IsStyle = true
+IfGenre = "DrawingBook"
+IfStyle = "DrawingBook"
+
+[node name="Shoe" type="Button" parent="."]
+margin_left = 715.0
+margin_top = 184.0
+margin_right = 891.0
+margin_bottom = 220.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 1.5
+IsGenre = true
+IfGenre = "Collection"
+
+[node name="MirrorSelf" type="Button" parent="."]
+margin_left = 719.0
+margin_top = 248.0
+margin_right = 767.0
+margin_bottom = 440.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 2.0
+IsGenre = true
+IfGenre = "SelfImprove"
+
+[node name="Dress" type="Button" parent="."]
+margin_left = 775.0
+margin_top = 232.0
+margin_right = 891.0
+margin_bottom = 456.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 2.5
+IsGenre = true
+IfGenre = "Dressing"
+
+[node name="Storage" type="Button" parent="."]
+margin_left = 715.0
+margin_top = 460.0
+margin_right = 891.0
+margin_bottom = 520.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 5.0
+IsGenre = true
+IfGenre = "Survival"
+
+[node name="Monitor" type="Button" parent="."]
+margin_left = 446.0
+margin_top = 292.0
+margin_right = 587.0
+margin_bottom = 367.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 3.5
+IsGenre = true
+IfGenre = "cinematic"
+
+[node name="CodingMonitor" type="Button" parent="."]
+margin_left = 363.0
+margin_top = 228.0
+margin_right = 439.0
+margin_bottom = 368.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 4.5
+IsGenre = true
+IfGenre = "Automation"
+
+[node name="WebCam" type="Button" parent="."]
+margin_left = 499.0
+margin_top = 284.0
+margin_right = 535.0
+margin_bottom = 304.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 4.0
+IsGenre = true
+IfGenre = "Camira"
+
+[node name="AnimePicture" type="Button" parent="."]
+margin_left = 483.0
+margin_top = 212.0
+margin_right = 551.0
+margin_bottom = 280.0
+flat = true
+script = ExtResource( 2 )
+StarStyle = 3.5
+IsStyle = true
+IfStyle = "Anime"
+
+[node name="Plant" type="Button" parent="."]
+margin_left = 607.0
+margin_top = 228.0
+margin_right = 651.0
+margin_bottom = 264.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 3.5
+StarStyle = 4.0
+IsGenre = true
+IsStyle = true
+IfGenre = "Planting"
+IfStyle = "Forest"
+
+[node name="Plant2" type="Button" parent="."]
+margin_left = 227.0
+margin_top = 208.0
+margin_right = 267.0
+margin_bottom = 252.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 3.5
+StarStyle = 4.0
+IsGenre = true
+IsStyle = true
+IfGenre = "Planting"
+IfStyle = "Forest"
+
+[node name="LavaLamp" type="Button" parent="."]
+margin_left = 655.0
+margin_top = 208.0
+margin_right = 695.0
+margin_bottom = 264.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 2.5
+StarStyle = 3.0
+IsGenre = true
+IsStyle = true
+IfGenre = "FloorIsLava"
+IfStyle = "Volcan"
+
+[node name="Ball" type="Button" parent="."]
+margin_left = 675.0
+margin_top = 340.0
+margin_right = 695.0
+margin_bottom = 360.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 5.0
+IsGenre = true
+IfGenre = "Ball"
+
+[node name="Mouse" type="Button" parent="."]
+margin_left = 599.0
+margin_top = 368.0
+margin_right = 623.0
+margin_bottom = 388.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 4.5
+IsGenre = true
+IfGenre = "Fps"
+
+[node name="MiniFridge" type="Button" parent="."]
+margin_left = 351.0
+margin_top = 404.0
+margin_right = 451.0
+margin_bottom = 524.0
+flat = true
+script = ExtResource( 2 )
+StarStyle = 4.0
+IsStyle = true
+IfStyle = "Winter"
+
+[node name="DIYNightTable" type="Button" parent="."]
+margin_left = 227.0
+margin_top = 412.0
+margin_right = 327.0
+margin_bottom = 524.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 4.5
+IsGenre = true
+IfGenre = "Crafting"
+
+[node name="Clock" type="Button" parent="."]
+margin_left = 231.0
+margin_top = 388.0
+margin_right = 274.0
+margin_bottom = 412.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 3.5
+IsGenre = true
+IfGenre = "Time"
+
+[node name="Bedding" type="Button" parent="."]
+margin_left = 19.0
+margin_top = 408.0
+margin_right = 227.0
+margin_bottom = 500.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 1.5
+IsGenre = true
+IfGenre = "Sorting"
+
+[node name="Art" type="Button" parent="."]
+margin_left = 35.0
+margin_top = 168.0
+margin_right = 195.0
+margin_bottom = 272.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 5.0
+IsGenre = true
+IsStyle = true
+IfGenre = "Drawing"
+IfStyle = "FreeStyle"
+
+[node name="Chair" type="Button" parent="."]
+margin_left = 491.0
+margin_top = 364.0
+margin_right = 591.0
+margin_bottom = 524.0
+flat = true
+script = ExtResource( 2 )
+StarGenre = 4.0
+IsGenre = true
+IfGenre = "Racing"
+
+[node name="GameSprite4" type="Sprite" parent="."]
+position = Vector2( 507, 120 )
+scale = Vector2( 2.5, 2.5 )
+texture = SubResource( 2 )
+
+[node name="GameSprite5" type="Sprite" parent="."]
+position = Vector2( 563, 120 )
+scale = Vector2( 2.5, 2.5 )
+texture = SubResource( 3 )
+
+[node name="GameSprite11" type="Sprite" parent="."]
+position = Vector2( 523, 144 )
+scale = Vector2( 3.5, 3.5 )
+texture = SubResource( 4 )
+
+[node name="GameSprite3" type="Sprite" parent="."]
+position = Vector2( 411, 136 )
+scale = Vector2( 4, 4 )
+texture = SubResource( 5 )
+
+[node name="GameSprite2" type="Sprite" parent="."]
+position = Vector2( 411, 152 )
+scale = Vector2( 3, 3 )
+texture = SubResource( 6 )
+
+[node name="GameSprite1" type="Sprite" parent="."]
+position = Vector2( 371, 136 )
+scale = Vector2( 4, 4 )
+texture = SubResource( 7 )
+
+[node name="GameSprite6" type="Sprite" parent="."]
+position = Vector2( 643, 144 )
+scale = Vector2( 3.5, 3.5 )
+texture = SubResource( 8 )

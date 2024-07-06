@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpt3iaba6dd37"]
+
+[ext_resource type="Texture2D" uid="uid://cacxfhv7oyoc7" path="res://Misc/Font/My Font [Number Version]-Sheet.png" id="1_60gcs"]
+[ext_resource type="Script" path="res://Script/sudoku.gd" id="1_w4oi1"]
+[ext_resource type="Script" path="res://Script/SudokuBlankGenerator.gd" id="2_33nfm"]
+[ext_resource type="PackedScene" uid="uid://l32tky5tx0cc" path="res://Scene/sudoku_number.tscn" id="3_p0xg2"]
+
+[node name="Sudoku" type="Node2D"]
+script = ExtResource("1_w4oi1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_60gcs")
+centered = false
+offset = Vector2(0, -3)
+hframes = 3
+vframes = 4
+
+[node name="Grid" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 9
+script = ExtResource("2_33nfm")
+numberSudoku = ExtResource("3_p0xg2")

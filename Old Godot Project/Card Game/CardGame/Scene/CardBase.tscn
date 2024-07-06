@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr4156g7q6ocu"]
+
+[ext_resource type="Script" path="res://Scene/CardBase.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://pausumwxy67e" path="res://Other/Fipps-Regular.otf" id="2"]
+[ext_resource type="Texture2D" uid="uid://cb0gryq8pu3lq" path="res://Sprite/Cards/Empty-Card-Assets.png" id="2_pyntr"]
+
+[sub_resource type="FontFile" id="1"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("2"), ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="CardBase" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -904.0
+offset_bottom = -432.0
+pivot_offset = Vector2(60, 84)
+script = ExtResource("1")
+
+[node name="CardSize" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_pyntr")
+centered = false
+
+[node name="Bars" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Before" type="HBoxContainer" parent="Bars"]
+layout_mode = 2
+
+[node name="LeftGap" type="MarginContainer" parent="Bars/Before"]
+custom_minimum_size = Vector2(59, 0)
+layout_mode = 2
+
+[node name="Rating" type="MarginContainer" parent="Bars/Before"]
+layout_mode = 2
+
+[node name="Rarity" type="Sprite2D" parent="Bars/Before/Rating"]
+centered = false
+vframes = 6
+
+[node name="TopGap" type="MarginContainer" parent="Bars"]
+custom_minimum_size = Vector2(0, 11)
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="Bars"]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+
+[node name="LeftGap" type="MarginContainer" parent="Bars/TopBar"]
+custom_minimum_size = Vector2(3.5, 0)
+layout_mode = 2
+
+[node name="Cost" type="MarginContainer" parent="Bars/TopBar"]
+layout_mode = 2
+
+[node name="Cost" type="Sprite2D" parent="Bars/TopBar/Cost"]
+centered = false
+hframes = 4
+vframes = 3
+
+[node name="MiddleBar" type="HBoxContainer" parent="Bars"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="LeftGap" type="MarginContainer" parent="Bars/MiddleBar"]
+layout_mode = 2
+
+[node name="Name" type="MarginContainer" parent="Bars/MiddleBar"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Bars/MiddleBar/Name"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("1")
+text = "Healing CampFire"
+
+[node name="BottomMiddleGap" type="VBoxContainer" parent="Bars"]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="Bars"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+
+[node name="LeftGap" type="MarginContainer" parent="Bars/BottomBar"]
+custom_minimum_size = Vector2(24.5, 0)
+layout_mode = 2
+
+[node name="Effect" type="MarginContainer" parent="Bars/BottomBar"]
+layout_mode = 2
+
+[node name="EffectAmount" type="Sprite2D" parent="Bars/BottomBar/Effect"]
+centered = false
+hframes = 4
+vframes = 3

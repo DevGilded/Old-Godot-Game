@@ -1,0 +1,6 @@
+res://default_env.tres
+res://Scene/DAY.tscn
+res://Scene/DAY_LABEL.tscn
+res://Script/time.gd
+res://Script/day_manager.gd
+res://Scene/BACKGROUND.tscn

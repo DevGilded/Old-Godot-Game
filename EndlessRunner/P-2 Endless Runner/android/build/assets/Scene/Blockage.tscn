@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resource/Sprite2D/Road/Ver1Road/Obstacle.png" type="Texture2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+size = Vector2( 16, 16 )
+
+[node name="Blockage" type="StaticBody2D"]
+z_index = 1
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource( 1 )

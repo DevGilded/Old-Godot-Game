@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Texture/Prototype.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Hidable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 5 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 16.0
+
+[node name="HideSpotTest" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 23 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 5
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Hidable" parent="." instance=ExtResource( 2 )]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hidable"]
+position = Vector2( 0, 23 )
+shape = SubResource( 2 )

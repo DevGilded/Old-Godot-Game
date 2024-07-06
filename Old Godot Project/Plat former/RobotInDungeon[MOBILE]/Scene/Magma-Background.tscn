@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprite/Background.png" type="Texture" id=1]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scale = Vector2( 10, 10 )
+transform = Transform2D( 10, 0, 0, 10, 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 160, 80 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false

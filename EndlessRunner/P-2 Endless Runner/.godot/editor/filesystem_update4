@@ -1,0 +1,4 @@
+res://default_env.tres
+res://Scene/MainMenu.tscn
+res://Scene/GamePlay.tscn
+res://Script/MovingTexture.gd

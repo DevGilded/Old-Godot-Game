@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resource/Texture2D/CarV1.png" type="Texture2D" id=1]
+[ext_resource path="res://Script/CarV1.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Car" type="CharacterBody2D"]
+scale = Vector2( 4, 4 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource( 1 )

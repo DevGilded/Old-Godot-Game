@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Resource/Item.gd" type="Script" id=1]
+[ext_resource path="res://ObjectTexture/SpriteT7.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Fantasy Book"
+texture = ExtResource( 2 )
+StarPlatForm = 0.0
+StarGenre = 4.0
+StarStyle = 3.5
+IsPlatForm = false
+IsGenre = true
+IsStyle = true
+IsRandom = false
+IfGenre = "Fantasy"
+IfStyle = "Fantasy"
+IfRandomGenre = [  ]
+IfRandomStyle = [  ]

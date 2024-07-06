@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1690450806
+default_env.tres::Environment::8583276241568944557::1690448681::0::1::::<><>::
+icon.png::CompressedTexture2D::6538497477141802473::1689423922::1690448009::1::::<><>::
+::res://Resource/::1690444897
+::res://Resource/Texture/::1690448009
+TileTest.png::CompressedTexture2D::8990275823638741263::1689504740::1690448009::1::::<><>::
+::res://Scene/::1690444898
+::res://Scene/TestScene/::1690448681
+TestWorld.tscn::PackedScene::1402952570109814840::1690448681::0::1::::<><>::res://Script/BackgroundTiling.gd
+::res://Script/::1690448681
+BackgroundTiling.gd::GDScript::-1::1690448681::0::1::::<>TileMap<>::

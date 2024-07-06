@@ -1,0 +1,116 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scene/ScnRecord.tscn" type="PackedScene" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.780392, 0.811765, 0.8, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.921569, 0.929412, 0.913725, 1 )
+shadow_size = 5
+
+[node name="Customer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel" type="Panel" parent="Background"]
+margin_right = 1024.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 1024, 48 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Panel" type="Button" parent="Background/Panel"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 152.0
+margin_bottom = 48.0
+
+[node name="Panel2" type="Button" parent="Background/Panel"]
+margin_left = 872.0
+margin_top = 8.0
+margin_right = 1016.0
+margin_bottom = 48.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+margin_top = 56.0
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Gap" type="MarginContainer" parent="Background/VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 0, 18 )
+
+[node name="Record" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 22.0
+margin_bottom = 65.0
+
+[node name="Record2" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 69.0
+margin_bottom = 112.0
+
+[node name="Record3" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 116.0
+margin_bottom = 159.0
+
+[node name="Record4" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 163.0
+margin_bottom = 206.0
+
+[node name="Record5" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 210.0
+margin_bottom = 253.0
+
+[node name="Record6" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 257.0
+margin_bottom = 300.0
+
+[node name="Record7" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 304.0
+margin_bottom = 347.0
+
+[node name="Record8" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 351.0
+margin_bottom = 394.0
+
+[node name="Record9" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 398.0
+margin_bottom = 441.0
+
+[node name="Record10" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 445.0
+margin_bottom = 488.0
+
+[node name="Record11" parent="Background/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 492.0
+margin_bottom = 535.0

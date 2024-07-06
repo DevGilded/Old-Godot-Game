@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://daqnwuq8wsqei"]
+
+[ext_resource type="FontFile" uid="uid://dmr8l3umehs3p" path="res://Resource/PixelifySans-Regular.ttf" id="1_aih5a"]
+[ext_resource type="StyleBox" uid="uid://dtb2vchvw2v5b" path="res://Resource/create_normal.tres" id="2_57et8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpky3"]
+bg_color = Color(0.929412, 0.976471, 0.760784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4e66"]
+bg_color = Color(0.470588, 0.396078, 0.235294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qym4s"]
+bg_color = Color(0.470588, 0.396078, 0.235294, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.929412, 0.976471, 0.760784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xytjk"]
+bg_color = Color(0.470588, 0.396078, 0.235294, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.929412, 0.976471, 0.760784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Main" type="Node2D"]
+
+[node name="background" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 324.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wpky3")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = 530.0
+offset_right = 324.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h4e66")
+
+[node name="Create" type="Button" parent="."]
+offset_left = 238.0
+offset_top = 498.0
+offset_right = 300.0
+offset_bottom = 560.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("1_aih5a")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = ExtResource("2_57et8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qym4s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xytjk")
+text = "+"

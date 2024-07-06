@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://l32tky5tx0cc"]
+
+[ext_resource type="Script" path="res://Script/SudokuNumber.gd" id="1_bn31n"]
+[ext_resource type="Texture2D" uid="uid://cacxfhv7oyoc7" path="res://Misc/Font/My Font [Number Version]-Sheet.png" id="2_a4crj"]
+
+[node name="SudokuNumber" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bn31n")
+
+[node name="NumberSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_a4crj")
+centered = false
+hframes = 3
+vframes = 4
+
+[connection signal="ChangeNumber" from="." to="." method="_on_change_number"]

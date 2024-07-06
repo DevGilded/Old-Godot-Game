@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhvswg5cq3cru"]
+
+[ext_resource type="PackedScene" uid="uid://cpt3iaba6dd37" path="res://Scene/sudoku.tscn" id="1_y33a4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sudoku" parent="." instance=ExtResource("1_y33a4")]

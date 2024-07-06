@@ -1,0 +1,140 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Texture/Sprite/Brown.png" type="Texture" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.752941, 0.580392, 0.45098, 1 )
+shadow_size = 5
+
+[node name="BrownBckgrd" type="Panel"]
+margin_right = 250.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Texture" type="MarginContainer" parent="."]
+margin_right = 250.0
+margin_bottom = 624.0
+
+[node name="Layer" type="VBoxContainer" parent="Texture"]
+margin_right = 250.0
+margin_bottom = 624.0
+rect_min_size = Vector2( 250, 48 )
+
+[node name="Style1" type="TextureRect" parent="Texture/Layer"]
+margin_right = 250.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap1" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 52.0
+margin_right = 250.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style2" type="TextureRect" parent="Texture/Layer"]
+margin_top = 72.0
+margin_right = 250.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap2" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 124.0
+margin_right = 250.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style3" type="TextureRect" parent="Texture/Layer"]
+margin_top = 144.0
+margin_right = 250.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap3" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 196.0
+margin_right = 250.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style4" type="TextureRect" parent="Texture/Layer"]
+margin_top = 216.0
+margin_right = 250.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap4" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 268.0
+margin_right = 250.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style5" type="TextureRect" parent="Texture/Layer"]
+margin_top = 288.0
+margin_right = 250.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap5" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 340.0
+margin_right = 250.0
+margin_bottom = 356.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style6" type="TextureRect" parent="Texture/Layer"]
+margin_top = 360.0
+margin_right = 250.0
+margin_bottom = 408.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap6" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 412.0
+margin_right = 250.0
+margin_bottom = 428.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style7" type="TextureRect" parent="Texture/Layer"]
+margin_top = 432.0
+margin_right = 250.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap7" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 484.0
+margin_right = 250.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style8" type="TextureRect" parent="Texture/Layer"]
+margin_top = 504.0
+margin_right = 250.0
+margin_bottom = 552.0
+rect_min_size = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="BetweenGap8" type="MarginContainer" parent="Texture/Layer"]
+margin_top = 556.0
+margin_right = 250.0
+margin_bottom = 572.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Style9" type="TextureRect" parent="Texture/Layer"]
+margin_top = 576.0
+margin_right = 250.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 24 )
+texture = ExtResource( 1 )
+stretch_mode = 2

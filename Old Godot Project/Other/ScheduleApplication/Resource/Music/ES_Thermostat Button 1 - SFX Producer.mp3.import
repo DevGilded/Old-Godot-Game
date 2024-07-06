@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Thermostat Button 1 - SFX Producer.mp3-017baace0e8caa0e8ea9cae80dc8d817.mp3str"
+
+[deps]
+
+source_file="res://Resource/Music/ES_Thermostat Button 1 - SFX Producer.mp3"
+dest_files=[ "res://.import/ES_Thermostat Button 1 - SFX Producer.mp3-017baace0e8caa0e8ea9cae80dc8d817.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

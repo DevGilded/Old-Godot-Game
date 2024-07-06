@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://blxd175d2xhmr"]
+
+[ext_resource type="Script" path="res://Script/Fibonacci.gd" id="1_j7cwu"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_j7cwu")

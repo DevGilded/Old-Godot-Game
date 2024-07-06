@@ -1,0 +1,35 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1715591780
+default_env.tres::Environment::6357808694217692811::1715591542::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1715591542::0::1::::<><>::
+icon.png::CompressedTexture2D::9173600371563652062::1715591542::1715591542::1::::<><>::
+::res://Resource/::1715591551
+::res://Resource/Font/::1715591551
+Fipps-Regular.otf::FontFile::8802558942550474247::1715591551::1715591551::1::::<><>::
+::res://Resource/Sprite/::1715591552
+ParallaxTree.png::CompressedTexture2D::2499897289794799036::1715591551::1715591551::1::::<><>::
+::res://Resource/Sprite/Car/::1715591551
+CarV1.png::CompressedTexture2D::7144140759025982730::1715591551::1715591551::1::::<><>::
+CarV2.png::CompressedTexture2D::1787530995553243791::1715591551::1715591551::1::::<><>::
+CarV3.png::CompressedTexture2D::7989870507522651274::1715591551::1715591551::1::::<><>::
+CarV4.png::CompressedTexture2D::5252203733840988969::1715591551::1715591552::1::::<><>::
+::res://Resource/Sprite/Road/::1715591553
+Middle1.png::CompressedTexture2D::4090036768350602296::1715591552::1715591552::1::::<><>::
+Middle2.png::CompressedTexture2D::7093407848628814878::1715591552::1715591552::1::::<><>::
+Middle3.png::CompressedTexture2D::8192671739386837072::1715591552::1715591552::1::::<><>::
+Obstacle.png::CompressedTexture2D::7962671514747573675::1715591552::1715591552::1::::<><>::
+Road1.png::CompressedTexture2D::1866170956113733003::1715591552::1715591552::1::::<><>::
+Road2.png::CompressedTexture2D::1452661051788878538::1715591552::1715591552::1::::<><>::
+Road3.png::CompressedTexture2D::4528258289038124966::1715591552::1715591552::1::::<><>::
+Road4.png::CompressedTexture2D::5021582677383070032::1715591552::1715591553::1::::<><>::
+Road5.png::CompressedTexture2D::6702715053679818014::1715591553::1715591553::1::::<><>::
+Road6.png::CompressedTexture2D::8768122310105791364::1715591553::1715591553::1::::<><>::
+::res://Scene/::1715591553
+GamePlay.tscn::PackedScene::8871578757521185386::1715591553::0::1::::<><>::res://Script/[Loader]Tree ForeGround.gd<>res://Script/[Loader]Road BackGround.gd
+MainMenu.tscn::PackedScene::3374545974912809732::1715591553::0::1::::<><>::uid://dxoa4h3gtjn56::::res://Resource/Font/Fipps-Regular.otf<>res://Script/PLAY.gd
+::res://Script/::1715591553
+PLAY.gd::GDScript::-1::1715591553::0::1::::<>Button<>::
+[Loader]Road BackGround.gd::GDScript::-1::1715591553::0::1::::<>Node<>::
+[Loader]Tree ForeGround.gd::GDScript::-1::1715591553::0::1::::<>Node2D<>::
+[Script]RoadMovement.gd::GDScript::-1::1715591553::0::1::::<>Sprite2D<>::
+[Script]TreeMoveMent.gd::GDScript::-1::1715591553::0::1::::<>Sprite2D<>::

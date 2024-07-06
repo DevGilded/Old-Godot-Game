@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Keyboard Typing - SFX Producer.mp3-70687bf1a8febf0e2d4d9f998f6f2ec5.mp3str"
+
+[deps]
+
+source_file="res://Resource/Music/ES_Keyboard Typing - SFX Producer.mp3"
+dest_files=[ "res://.import/ES_Keyboard Typing - SFX Producer.mp3-70687bf1a8febf0e2d4d9f998f6f2ec5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

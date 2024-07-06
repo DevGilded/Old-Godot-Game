@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://s6h7rmec51oc"]
+
+[ext_resource type="Texture2D" uid="uid://cfd1s7ql2yxrv" path="res://Texture/Prototype.png" id="1"]
+[ext_resource type="Script" path="res://Script/Player.gd" id="2"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(12, 16)
+
+[sub_resource type="CircleShape2D" id="2"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+editor_draw_limits = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+hframes = 10
+vframes = 10
+frame = 50
+
+[node name="C" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(-5.5, 4)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(5.5, 4)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("2")
+
+[node name="CanInteract" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(0, -12)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1")
+hframes = 5
+vframes = 5
+frame = 6
+
+[connection signal="area_entered" from="Area2D" to="." method="_onInteractableEnter"]
+[connection signal="area_exited" from="Area2D" to="." method="_onInteractableExit"]

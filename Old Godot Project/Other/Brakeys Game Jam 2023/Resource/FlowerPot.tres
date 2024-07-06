@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Resource/Item.gd" type="Script" id=1]
+[ext_resource path="res://ObjectTexture/SpriteT22.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+Name = "FlowerPot"
+texture = ExtResource( 3 )
+StarPlatForm = 0.0
+StarGenre = 0.0
+StarStyle = 0.0
+IsPlatForm = false
+IsGenre = false
+IsStyle = false
+IsRandom = false
+IfGenre = ""
+IfStyle = ""
+IfRandomGenre = [  ]
+IfRandomStyle = [  ]

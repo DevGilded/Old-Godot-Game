@@ -1,0 +1,785 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo8lebj5emnej"]
+
+[ext_resource type="Script" path="res://Script/sudokuNumberGenerator.gd" id="1_4dit1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5671"]
+bg_color = Color(0.168627, 0.164706, 0.513726, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_syfks"]
+font_size = 32
+
+[node name="Main" type="Node2D"]
+
+[node name="sudokuNumberGenerator" type="Node2D" parent="."]
+script = ExtResource("1_4dit1")
+
+[node name="SudokuLayout" type="Control" parent="sudokuNumberGenerator"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ROW" type="HBoxContainer" parent="sudokuNumberGenerator/SudokuLayout"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="COLUMN1" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN2" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN3" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN4" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN4"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN5" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN5"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN6" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN6"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN7" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN7"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN8" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN8"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="COLUMN9" type="VBoxContainer" parent="sudokuNumberGenerator/SudokuLayout/ROW"]
+layout_mode = 2
+
+[node name="column1" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column2" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column3" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column4" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column5" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column6" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column7" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column8" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="column9" type="Label" parent="sudokuNumberGenerator/SudokuLayout/ROW/COLUMN9"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5671")
+text = "0"
+label_settings = SubResource("LabelSettings_syfks")
+horizontal_alignment = 1
+vertical_alignment = 1
